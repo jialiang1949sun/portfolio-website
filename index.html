@@ -24,15 +24,6 @@
             transform: translateY(-8px);
             box-shadow: 0 20px 40px rgba(0, 212, 170, 0.15);
         }
-        .img-placeholder {
-            background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
-            border: 2px dashed #333;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #666;
-            font-size: 14px;
-        }
         .tag {
             background: rgba(0, 212, 170, 0.1);
             border: 1px solid rgba(0, 212, 170, 0.3);
@@ -79,7 +70,6 @@
 <base target="_blank">
 </head>
 <body class="grid-bg">
-    <!-- 导航栏 -->
     <nav class="fixed top-0 w-full z-50 nav-blur border-b border-white/10">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
             <div class="text-xl font-bold gradient-text">Portfolio</div>
@@ -92,28 +82,21 @@
         </div>
     </nav>
 
-    <!-- (1) 首页 -->
     <section id="home" class="min-h-screen flex items-center justify-center relative pt-20">
         <div class="absolute inset-0 overflow-hidden">
             <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-[#00d4aa]/20 rounded-full blur-3xl"></div>
             <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-[#8b5cf6]/20 rounded-full blur-3xl"></div>
         </div>
-
         <div class="max-w-5xl mx-auto px-6 text-center relative z-10">
             <div class="w-32 h-32 mx-auto mb-8 rounded-full overflow-hidden neon-glow">
                 <img src="avatar.jpg" class="w-full h-full object-cover" alt="个人头像">
             </div>
-
             <h1 class="text-5xl md:text-7xl font-bold mb-6">
                 <span class="gradient-text">VibeCoding构建者</span>
                 <span class="text-white/60"> × </span>
                 <span class="gradient-text">AI智能体架构师</span>
             </h1>
-
-            <p class="text-xl text-gray-400 mb-8 max-w-2xl mx-auto">
-                用自然语言构建产品，让AI成为我的工程团队
-            </p>
-
+            <p class="text-xl text-gray-400 mb-8 max-w-2xl mx-auto">用自然语言构建产品，让AI成为我的工程团队</p>
             <div class="flex justify-center gap-12 mb-12">
                 <div class="text-center">
                     <div class="text-3xl font-bold text-[#00d4aa]">3</div>
@@ -128,20 +111,16 @@
                     <div class="text-sm text-gray-500">独立全流程</div>
                 </div>
             </div>
-
             <a href="#projects" class="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-[#00d4aa] to-[#8b5cf6] rounded-full font-semibold hover:opacity-90 transition-opacity">
                 查看项目 <i data-lucide="arrow-down" class="w-4 h-4"></i>
             </a>
         </div>
     </section>
 
-    <!-- (2) 大目录 -->
     <section id="projects" class="py-20">
         <div class="max-w-7xl mx-auto px-6">
             <h2 class="text-3xl font-bold mb-12 text-center">项目目录</h2>
-
             <div class="grid md:grid-cols-2 gap-6">
-                <!-- 大众点评 - Trae -->
                 <div class="hover-card bg-white/5 border border-white/10 rounded-2xl p-6 cursor-pointer" onclick="showProject('dianping')">
                     <div class="h-48 rounded-xl overflow-hidden mb-4">
                         <img src="dianping/大众点评封面.png" class="w-full h-full object-cover" alt="大众点评">
@@ -152,12 +131,8 @@
                     </div>
                     <h3 class="text-xl font-bold mb-2">大众点评Demo</h3>
                     <p class="text-gray-400 text-sm mb-4">全栈商户评价平台，支持搜索、评分、地图定位与商户入驻系统</p>
-                    <div class="flex gap-2 text-xs text-gray-500">
-                        <span>React</span><span>•</span><span>Express</span><span>•</span><span>SQLite</span>
-                    </div>
+                    <div class="flex gap-2 text-xs text-gray-500"><span>React</span><span>•</span><span>Express</span><span>•</span><span>SQLite</span></div>
                 </div>
-
-                <!-- 公考战略 - Manus -->
                 <div class="hover-card bg-white/5 border border-white/10 rounded-2xl p-6 cursor-pointer" onclick="showProject('gongkao')">
                     <div class="h-48 rounded-xl overflow-hidden mb-4">
                         <img src="gongkao/仪表盘倒计时.png" class="w-full h-full object-cover" alt="公考战略">
@@ -168,12 +143,8 @@
                     </div>
                     <h3 class="text-xl font-bold mb-2">2027公考战略中心</h3>
                     <p class="text-gray-400 text-sm mb-4">备考进度可视化仪表盘，战略地图+错题本+分级岗位推荐</p>
-                    <div class="flex gap-2 text-xs text-gray-500">
-                        <span>Next.js</span><span>•</span><span>tRPC</span><span>•</span><span>Vitest</span>
-                    </div>
+                    <div class="flex gap-2 text-xs text-gray-500"><span>Next.js</span><span>•</span><span>tRPC</span><span>•</span><span>Vitest</span></div>
                 </div>
-
-                <!-- 心屿手札 - Manus -->
                 <div class="hover-card bg-white/5 border border-white/10 rounded-2xl p-6 cursor-pointer" onclick="showProject('mindscape')">
                     <div class="h-48 rounded-xl overflow-hidden mb-4">
                         <img src="xinyu/封面.png" class="w-full h-full object-cover" alt="心屿手札">
@@ -184,12 +155,8 @@
                     </div>
                     <h3 class="text-xl font-bold mb-2">心屿手札 MindScape</h3>
                     <p class="text-gray-400 text-sm mb-4">沉浸式情绪管理应用，将情绪转化为视觉生态与MBTI人格图谱</p>
-                    <div class="flex gap-2 text-xs text-gray-500">
-                        <span>React</span><span>•</span><span>PWA</span><span>•</span><span>Framer Motion</span>
-                    </div>
+                    <div class="flex gap-2 text-xs text-gray-500"><span>React</span><span>•</span><span>PWA</span><span>•</span><span>Framer Motion</span></div>
                 </div>
-
-                <!-- 智能体 - Dify -->
                 <div class="hover-card bg-white/5 border border-white/10 rounded-2xl p-6 cursor-pointer" onclick="showProject('agent')">
                     <div class="h-48 rounded-xl overflow-hidden mb-4">
                         <img src="kefu/工作流架构图.png" class="w-full h-full object-cover" alt="智能体">
@@ -200,15 +167,12 @@
                     </div>
                     <h3 class="text-xl font-bold mb-2">Dify智能体客服系统</h3>
                     <p class="text-gray-400 text-sm mb-4">基于RAG的企业级客服Agent，支持知识库问答、订单查询与情感安抚</p>
-                    <div class="flex gap-2 text-xs text-gray-500">
-                        <span>RAG</span><span>•</span><span>Workflow</span><span>•</span><span>Prompt Engineering</span>
-                    </div>
+                    <div class="flex gap-2 text-xs text-gray-500"><span>RAG</span><span>•</span><span>Workflow</span><span>•</span><span>Prompt Engineering</span></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- (3) 项目详情页（动态显示） -->
     <section id="project-detail" class="py-20 hidden">
         <div class="max-w-6xl mx-auto px-6">
             <button onclick="backToList()" class="mb-8 flex items-center gap-2 text-gray-400 hover:text-white transition-colors">
@@ -218,17 +182,13 @@
         </div>
     </section>
 
-    <!-- (4) VibeCoding全流程 -->
     <section id="vibecoding" class="py-20 bg-white/5">
         <div class="max-w-6xl mx-auto px-6">
             <h2 class="text-3xl font-bold mb-4 text-center">VibeCoding全流程</h2>
             <p class="text-center text-gray-400 mb-16">从自然语言Prompt到可部署产品的完整链路</p>
-            
             <div class="relative">
                 <div class="absolute left-1/2 top-0 bottom-0 w-px timeline-line hidden md:block"></div>
-                
                 <div class="space-y-12">
-                    <!-- Step 1 -->
                     <div class="relative flex items-center justify-center md:justify-between reveal">
                         <div class="hidden md:block w-5/12 text-right pr-12">
                             <h3 class="text-xl font-bold mb-2">灵感捕捉</h3>
@@ -240,39 +200,31 @@
                                 <h3 class="text-xl font-bold mb-2">灵感捕捉</h3>
                                 <p class="text-gray-400">使用自然语言描述需求，AI生成初步的产品架构与技术选型。</p>
                             </div>
-                            <div class="bg-white/5 p-4 rounded-xl border border-white/10">
-                                <code class="text-xs text-[#00d4aa]">"帮我写一个类似大众点评的Demo..."</code>
-                            </div>
+                            <img src="workflow/prompt.png" class="w-full rounded-xl border border-white/10 mb-4" alt="Prompt对话">
                         </div>
                     </div>
-
-                    <!-- Step 2 -->
                     <div class="relative flex items-center justify-center md:justify-between reveal">
                         <div class="w-full md:w-5/12 pr-12">
                             <div class="md:text-right mb-4">
                                 <h3 class="text-xl font-bold mb-2">沉浸式编码</h3>
-                                <p class="text-gray-400">在Trae/Manus中通过对话不断迭代功能，AI自动补全核心代码逻辑。</p>
+                                <p class="text-gray-400">在Trae/Manus中通过对话不断迭代功能，AI自动补齐核心代码逻辑。</p>
                             </div>
+                            <img src="workflow/v1.png" class="w-full rounded-xl border border-white/10 mb-4" alt="编码过程">
                         </div>
                         <div class="w-12 h-12 rounded-full bg-[#8b5cf6] flex items-center justify-center z-10 neon-glow">2</div>
                         <div class="hidden md:block w-5/12 pl-12">
-                            <div class="bg-white/5 p-4 rounded-xl border border-white/10">
-                                <code class="text-xs text-[#8b5cf6]">Generating components... Done.</code>
-                            </div>
+                            <img src="workflow/architecture.png" class="w-full rounded-xl border border-white/10" alt="架构图">
                         </div>
                     </div>
-
-                    <!-- Step 3 -->
                     <div class="relative flex items-center justify-center md:justify-between reveal">
                         <div class="hidden md:block w-5/12 text-right pr-12">
-                            <div class="bg-white/5 p-4 rounded-xl border border-white/10">
-                                <code class="text-xs text-white">Deploying to GitHub Pages...</code>
-                            </div>
+                            <img src="workflow/test.png" class="w-full rounded-xl border border-white/10" alt="测试报告">
                         </div>
                         <div class="w-12 h-12 rounded-full bg-white flex items-center justify-center z-10 neon-glow text-black font-bold">3</div>
                         <div class="w-full md:w-5/12 pl-12">
                             <h3 class="text-xl font-bold mb-2">自动化部署</h3>
                             <p class="text-gray-400">一键发布至云端，实现从Prompt到上线产品的闭环体验。</p>
+                            <img src="workflow/product.png" class="w-full rounded-xl border border-white/10 mt-4" alt="线上产品">
                         </div>
                     </div>
                 </div>
@@ -280,7 +232,6 @@
         </div>
     </section>
 
-    <!-- (5) 智能体架构 -->
     <section id="agent" class="py-20">
         <div class="max-w-6xl mx-auto px-6 text-center">
             <h2 class="text-3xl font-bold mb-12">AI Agent 架构思维</h2>
@@ -288,17 +239,17 @@
                 <div class="p-8 bg-white/5 rounded-3xl border border-white/10 hover-card">
                     <i data-lucide="brain" class="w-12 h-12 text-[#00d4aa] mx-auto mb-6"></i>
                     <h3 class="text-xl font-bold mb-4">RAG 知识库</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed">基于企业私有文档的语义搜索，解决LLM幻觉问题，提供精准问答。</p>
+                    <p class="text-gray-400 text-sm leading-relaxed">基于企业私有文档的语义搜索，解决LLM幻觉问题。</p>
                 </div>
                 <div class="p-8 bg-white/5 rounded-3xl border border-white/10 hover-card">
                     <i data-lucide="git-branch" class="w-12 h-12 text-[#8b5cf6] mx-auto mb-6"></i>
                     <h3 class="text-xl font-bold mb-4">工作流编排</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed">通过逻辑节点编排复杂任务，实现智能分类、条件分支与API调用。</p>
+                    <p class="text-gray-400 text-sm leading-relaxed">通过逻辑节点编排复杂任务，实现智能分类与API调用。</p>
                 </div>
                 <div class="p-8 bg-white/5 rounded-3xl border border-white/10 hover-card">
                     <i data-lucide="message-square" class="w-12 h-12 text-white mx-auto mb-6"></i>
                     <h3 class="text-xl font-bold mb-4">提示词工程</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed">结构化Prompt设计，赋予Agent特定的人设、技能边界与输出规范。</p>
+                    <p class="text-gray-400 text-sm leading-relaxed">结构化Prompt设计，赋予Agent特定的人设与技能边界。</p>
                 </div>
             </div>
         </div>
@@ -309,16 +260,13 @@
     </footer>
 
     <script>
-        // 初始化图标
         lucide.createIcons();
-
-        // 项目数据
         const projectData = {
             dianping: {
                 title: "大众点评Demo",
                 tags: ["React", "Express", "Tailwind"],
                 desc: "全栈商户评价平台，通过Trae的AI协作在4小时内完成核心逻辑构建。",
-                images: ["dianping/大众点评封面.png", "dianping/商户详情页.png", "dianping/首页轮播图.png", "dianping/搜索筛选页.png"]
+                images: ["dianping/大众点评封面.png", "dianping/商户详情页.png", "dianping/首页轮播图.png", "dianping/搜索筛选页.png", "dianping/商户后台管理.png"]
             },
             gongkao: {
                 title: "2027公考战略中心",
@@ -339,7 +287,6 @@
                 images: ["kefu/工作流架构图.png", "kefu/意图分类器.png", "kefu/知识库配置.png", "kefu/提示词.png"]
             }
         };
-
         function showProject(id) {
             const project = projectData[id];
             const content = `
@@ -360,22 +307,16 @@
             document.getElementById('project-detail').classList.remove('hidden');
             window.scrollTo(0, 0);
         }
-
         function backToList() {
             document.getElementById('projects').classList.remove('hidden');
             document.getElementById('home').classList.remove('hidden');
             document.getElementById('project-detail').classList.add('hidden');
         }
-
-        // 揭露动画
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('active');
-                }
+                if (entry.isIntersecting) entry.target.classList.add('active');
             });
         }, { threshold: 0.1 });
-
         document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
     </script>
 </body>
