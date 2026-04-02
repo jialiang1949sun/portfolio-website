@@ -122,8 +122,8 @@
             <h2 class="text-3xl font-bold mb-12 text-center">项目目录</h2>
             <div class="grid md:grid-cols-2 gap-6">
                 <div class="hover-card bg-white/5 border border-white/10 rounded-2xl p-6 cursor-pointer" onclick="showProject('dianping')">
-                    <div class="h-48 rounded-xl overflow-hidden mb-4">
-                        <img src="dianping/大众点评封面.png" class="w-full h-full object-cover" alt="大众点评">
+                    <div class="h-64 bg-black/40 rounded-xl overflow-hidden mb-4 flex items-center justify-center">
+                        <img src="dianping/大众点评封面.png" class="max-w-full max-h-full object-contain" alt="大众点评">
                     </div>
                     <div class="flex gap-2 mb-3 flex-wrap">
                         <span class="tag px-3 py-1 rounded-full text-xs">VibeCoding</span>
@@ -134,8 +134,8 @@
                     <div class="flex gap-2 text-xs text-gray-500"><span>React</span><span>•</span><span>Express</span><span>•</span><span>SQLite</span></div>
                 </div>
                 <div class="hover-card bg-white/5 border border-white/10 rounded-2xl p-6 cursor-pointer" onclick="showProject('gongkao')">
-                    <div class="h-48 rounded-xl overflow-hidden mb-4">
-                        <img src="gongkao/仪表盘倒计时.png" class="w-full h-full object-cover" alt="公考战略">
+                    <div class="h-64 bg-black/40 rounded-xl overflow-hidden mb-4 flex items-center justify-center">
+                        <img src="gongkao/仪表盘倒计时.png" class="max-w-full max-h-full object-contain" alt="公考战略">
                     </div>
                     <div class="flex gap-2 mb-3 flex-wrap">
                         <span class="tag px-3 py-1 rounded-full text-xs">VibeCoding</span>
@@ -146,8 +146,8 @@
                     <div class="flex gap-2 text-xs text-gray-500"><span>Next.js</span><span>•</span><span>tRPC</span><span>•</span><span>Vitest</span></div>
                 </div>
                 <div class="hover-card bg-white/5 border border-white/10 rounded-2xl p-6 cursor-pointer" onclick="showProject('mindscape')">
-                    <div class="h-48 rounded-xl overflow-hidden mb-4">
-                        <img src="xinyu/封面.png" class="w-full h-full object-cover" alt="心屿手札">
+                    <div class="h-64 bg-black/40 rounded-xl overflow-hidden mb-4 flex items-center justify-center">
+                        <img src="xinyu/封面.png" class="max-w-full max-h-full object-contain" alt="心屿手札">
                     </div>
                     <div class="flex gap-2 mb-3 flex-wrap">
                         <span class="tag px-3 py-1 rounded-full text-xs">VibeCoding</span>
@@ -158,8 +158,8 @@
                     <div class="flex gap-2 text-xs text-gray-500"><span>React</span><span>•</span><span>PWA</span><span>•</span><span>Framer Motion</span></div>
                 </div>
                 <div class="hover-card bg-white/5 border border-white/10 rounded-2xl p-6 cursor-pointer" onclick="showProject('agent')">
-                    <div class="h-48 rounded-xl overflow-hidden mb-4">
-                        <img src="kefu/工作流架构图.png" class="w-full h-full object-cover" alt="智能体">
+                    <div class="h-64 bg-black/40 rounded-xl overflow-hidden mb-4 flex items-center justify-center">
+                        <img src="kefu/工作流架构图.png" class="max-w-full max-h-full object-contain" alt="智能体">
                     </div>
                     <div class="flex gap-2 mb-3 flex-wrap">
                         <span class="tag-purple px-3 py-1 rounded-full text-xs">AI Agent</span>
@@ -264,40 +264,118 @@
         const projectData = {
             dianping: {
                 title: "大众点评Demo",
-                tags: ["React", "Express", "Tailwind"],
+                subtitle: "全栈商户评价平台",
+                tags: ["React", "Express", "SQLite", "Framer Motion"],
                 desc: "全栈商户评价平台，通过Trae的AI协作在4小时内完成核心逻辑构建。",
+                features: [
+                    "商户入驻系统：支持商户管理员注册、店铺信息编辑、图片上传",
+                    "用户评分评论：1-5星评分制度，200字评论限制，商家回复功能",
+                    "地理位置服务：集成OpenStreetMap，支持按距离搜索与筛选",
+                    "响应式界面：Framer Motion动画，移动端与桌面端完美适配"
+                ],
+                demoUrl: "https://jialiang1949sun.github.io/portfolio-website/",
+                repoUrl: "https://github.com/jialiang1949sun/portfolio-website",
                 images: ["dianping/大众点评封面.png", "dianping/商户详情页.png", "dianping/首页轮播图.png", "dianping/搜索筛选页.png", "dianping/商户后台管理.png"]
             },
             gongkao: {
                 title: "2027公考战略中心",
-                tags: ["Next.js", "D3.js", "Manus"],
-                desc: "数据驱动的备考系统，集成Manus自动化的岗位分析数据流。",
+                subtitle: "备考进度可视化仪表盘",
+                tags: ["Next.js", "D3.js", "Manus", "tRPC"],
+                desc: "数据驱动的备考系统 ，集成Manus自动化的岗位分析数据流。",
+                features: [
+                    "动态仪表盘：实时倒计时与备考阶段进度条可视化",
+                    "战略地图：基于D3.js的知识点关联图谱与学习路径",
+                    "智能岗位推荐：根据用户专业、学历自动筛选最优岗位",
+                    "错题本系统：支持拍照录入与AI解析知识点归类"
+                ],
+                demoUrl: "#",
+                repoUrl: "#",
                 images: ["gongkao/仪表盘倒计时.png", "gongkao/战略地图时间轴.png", "gongkao/岗位推荐卡片.png", "gongkao/错题本界面.png"]
             },
             mindscape: {
                 title: "心屿手札 MindScape",
-                tags: ["React", "PWA", "Framer Motion"],
+                subtitle: "沉浸式情绪管理应用",
+                tags: ["React", "PWA", "Framer Motion", "Three.js"],
                 desc: "情绪视觉化生态应用，探索人类情感与数字世界的共生可能。",
+                features: [
+                    "情绪视觉化：根据心情自动生成动态背景颜色与粒子效果",
+                    "MBTI图谱：深度集成16型人格数据，提供个性化心理建议",
+                    "能量兑换系统：将正向行为转化为虚拟生态种子进行养成",
+                    "离线支持：基于PWA技术，无网络环境下依然可记录心迹"
+                ],
+                demoUrl: "#",
+                repoUrl: "#",
                 images: ["xinyu/封面.png", "xinyu/情绪记录页.png", "xinyu/人格图谱.png", "xinyu/能量兑换界面.png"]
             },
             agent: {
                 title: "Dify智能体客服系统",
-                tags: ["Dify", "RAG", "Prompt"],
+                subtitle: "企业级RAG客服Agent",
+                tags: ["Dify", "RAG", "Prompt", "Workflow"],
                 desc: "企业级多模态客服Agent，实现从问题拦截到自动化解决的闭环。",
+                features: [
+                    "混合搜索：结合向量与关键词搜索，解决垂直领域幻觉问题",
+                    "意图识别：高精度识别用户诉求，自动流转至对应处理分支",
+                    "长记忆管理：支持跨会话的用户偏好记忆与上下文关联",
+                    "API集成：打通企业ERP系统，实现订单查询与退换货自动化"
+                ],
+                demoUrl: "#",
+                repoUrl: "#",
                 images: ["kefu/工作流架构图.png", "kefu/意图分类器.png", "kefu/知识库配置.png", "kefu/提示词.png"]
             }
         };
+
         function showProject(id) {
             const project = projectData[id];
             const content = `
                 <div class="reveal active">
-                    <h1 class="text-4xl font-bold mb-4">${project.title}</h1>
-                    <div class="flex gap-2 mb-8">
-                        ${project.tags.map(t => `<span class="px-3 py-1 bg-white/10 rounded-full text-xs">${t}</span>`).join('')}
+                    <div class="flex flex-col md:flex-row justify-between items-start gap-6 mb-8">
+                        <div>
+                            <h1 class="text-4xl md:text-5xl font-bold mb-2">${project.title}</h1>
+                            <p class="text-xl text-gray-400">${project.subtitle}</p>
+                        </div>
+                        <div class="flex gap-4">
+                            <a href="${project.demoUrl}" class="flex items-center gap-2 px-6 py-3 bg-[#00d4aa] text-black font-bold rounded-xl hover:opacity-90 transition-opacity">
+                                <i data-lucide="external-link" class="w-4 h-4"></i> 查看线上Demo
+                            </a>
+                            <a href="${project.repoUrl}" class="flex items-center gap-2 px-6 py-3 bg-white/10 border border-white/20 font-bold rounded-xl hover:bg-white/20 transition-all">
+                                GitHub仓库
+                            </a>
+                        </div>
                     </div>
-                    <p class="text-xl text-gray-400 mb-12">${project.desc}</p>
-                    <div class="grid gap-8">
-                        ${project.images.map(img => `<img src="${img}" class="w-full rounded-3xl border border-white/10 shadow-2xl" alt="Preview">`).join('')}
+
+                    <div class="flex gap-2 mb-12 flex-wrap">
+                        ${project.tags.map(t => `<span class="px-4 py-1.5 bg-white/5 border border-white/10 rounded-full text-sm text-gray-300">${t}</span>`).join('')}
+                    </div>
+
+                    <div class="grid md:grid-cols-3 gap-12 mb-16">
+                        <div class="md:col-span-2">
+                            <h3 class="text-2xl font-bold mb-6">核心功能</h3>
+                            <div class="space-y-4">
+                                ${project.features.map(f => `
+                                    <div class="flex items-start gap-3">
+                                        <div class="mt-1 w-5 h-5 rounded-full bg-[#00d4aa]/20 flex items-center justify-center flex-shrink-0">
+                                            <i data-lucide="check" class="w-3 h-3 text-[#00d4aa]"></i>
+                                        </div>
+                                        <p class="text-gray-300 leading-relaxed">${f}</p>
+                                    </div>
+                                `).join('')}
+                            </div>
+                        </div>
+                        <div class="bg-white/5 p-8 rounded-3xl border border-white/10 h-fit">
+                            <h3 class="text-lg font-bold mb-4">项目背景</h3>
+                            <p class="text-gray-400 text-sm leading-relaxed">${project.desc}</p>
+                        </div>
+                    </div>
+
+                    <div class="space-y-8">
+                        <h3 class="text-2xl font-bold">界面预览</h3>
+                        <div class="grid gap-8">
+                            ${project.images.map(img => `
+                                <div class="bg-black/40 rounded-3xl border border-white/10 p-4">
+                                    <img src="${img}" class="w-full h-auto object-contain rounded-xl shadow-2xl" alt="Preview">
+                                </div>
+                            `).join('')}
+                        </div>
                     </div>
                 </div>
             `;
@@ -305,13 +383,16 @@
             document.getElementById('projects').classList.add('hidden');
             document.getElementById('home').classList.add('hidden');
             document.getElementById('project-detail').classList.remove('hidden');
+            lucide.createIcons();
             window.scrollTo(0, 0);
         }
+
         function backToList() {
             document.getElementById('projects').classList.remove('hidden');
             document.getElementById('home').classList.remove('hidden');
             document.getElementById('project-detail').classList.add('hidden');
         }
+
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) entry.target.classList.add('active');
