@@ -100,8 +100,8 @@
         </div>
 
         <div class="max-w-5xl mx-auto px-6 text-center relative z-10">
-            <div class="w-32 h-32 mx-auto mb-8 rounded-full img-placeholder neon-glow">
-                [个人头像]
+            <div class="w-32 h-32 mx-auto mb-8 rounded-full overflow-hidden neon-glow">
+                <img src="个人头像.jpg" class="w-full h-full object-cover" alt="个人头像">
             </div>
 
             <h1 class="text-5xl md:text-7xl font-bold mb-6">
@@ -143,8 +143,8 @@
             <div class="grid md:grid-cols-2 gap-6">
                 <!-- 大众点评 - Trae -->
                 <div class="hover-card bg-white/5 border border-white/10 rounded-2xl p-6 cursor-pointer" onclick="showProject('dianping')">
-                    <div class="h-48 rounded-xl img-placeholder mb-4">
-                        [大众点评封面图]
+                    <div class="h-48 rounded-xl overflow-hidden mb-4">
+                        <img src="大众点评/大众点评封面.png" class="w-full h-full object-cover" alt="大众点评">
                     </div>
                     <div class="flex gap-2 mb-3 flex-wrap">
                         <span class="tag px-3 py-1 rounded-full text-xs">VibeCoding</span>
@@ -159,8 +159,8 @@
 
                 <!-- 公考战略 - Manus -->
                 <div class="hover-card bg-white/5 border border-white/10 rounded-2xl p-6 cursor-pointer" onclick="showProject('gongkao')">
-                    <div class="h-48 rounded-xl img-placeholder mb-4">
-                        [公考战略封面图]
+                    <div class="h-48 rounded-xl overflow-hidden mb-4">
+                        <img src="考公战略/仪表盘倒计时.png" class="w-full h-full object-cover" alt="公考战略">
                     </div>
                     <div class="flex gap-2 mb-3 flex-wrap">
                         <span class="tag px-3 py-1 rounded-full text-xs">VibeCoding</span>
@@ -175,8 +175,8 @@
 
                 <!-- 心屿手札 - Manus -->
                 <div class="hover-card bg-white/5 border border-white/10 rounded-2xl p-6 cursor-pointer" onclick="showProject('mindscape')">
-                    <div class="h-48 rounded-xl img-placeholder mb-4">
-                        [心屿手札封面图]
+                    <div class="h-48 rounded-xl overflow-hidden mb-4">
+                        <img src="心屿手札/封面.png" class="w-full h-full object-cover" alt="心屿手札">
                     </div>
                     <div class="flex gap-2 mb-3 flex-wrap">
                         <span class="tag px-3 py-1 rounded-full text-xs">VibeCoding</span>
@@ -191,8 +191,8 @@
 
                 <!-- 智能体 - Dify -->
                 <div class="hover-card bg-white/5 border border-white/10 rounded-2xl p-6 cursor-pointer" onclick="showProject('agent')">
-                    <div class="h-48 rounded-xl img-placeholder mb-4">
-                        [智能体封面图]
+                    <div class="h-48 rounded-xl overflow-hidden mb-4">
+                        <img src="智能客服/工作流架构图.png" class="w-full h-full object-cover" alt="智能体">
                     </div>
                     <div class="flex gap-2 mb-3 flex-wrap">
                         <span class="tag-purple px-3 py-1 rounded-full text-xs">AI Agent</span>
@@ -226,29 +226,29 @@
 
             <div class="grid md:grid-cols-4 gap-8">
                 <div class="text-center reveal">
-                    <div class="w-16 h-16 mx-auto bg-[#00d4aa]/10 rounded-2xl flex items-center justify-center mb-4 border border-[#00d4aa]/30">
-                        <i data-lucide="message-square" class="text-[#00d4aa]"></i>
+                    <div class="w-16 h-16 mx-auto bg-[#00d4aa]/10 rounded-2xl flex items-center justify-center mb-4 border border-[#00d4aa]/30 overflow-hidden">
+                        <img src="vibe coding流程/Prompt对话截图.png" class="w-full h-full object-cover" alt="需求Prompt化">
                     </div>
                     <h4 class="font-bold mb-2">需求Prompt化</h4>
                     <p class="text-xs text-gray-500">精准描述功能点与UI风格，设定技术栈约束</p>
                 </div>
                 <div class="text-center reveal">
-                    <div class="w-16 h-16 mx-auto bg-[#8b5cf6]/10 rounded-2xl flex items-center justify-center mb-4 border border-[#8b5cf6]/30">
-                        <i data-lucide="code-2" class="text-[#8b5cf6]"></i>
+                    <div class="w-16 h-16 mx-auto bg-[#8b5cf6]/10 rounded-2xl flex items-center justify-center mb-4 border border-[#8b5cf6]/30 overflow-hidden">
+                        <img src="vibe coding流程/初版本.png" class="w-full h-full object-cover" alt="AI 结对编程">
                     </div>
                     <h4 class="font-bold mb-2">AI 结对编程</h4>
                     <p class="text-xs text-gray-500">利用Trae/Manus生成代码，快速迭代核心逻辑</p>
                 </div>
                 <div class="text-center reveal">
-                    <div class="w-16 h-16 mx-auto bg-[#00d4aa]/10 rounded-2xl flex items-center justify-center mb-4 border border-[#00d4aa]/30">
-                        <i data-lucide="terminal" class="text-[#00d4aa]"></i>
+                    <div class="w-16 h-16 mx-auto bg-[#00d4aa]/10 rounded-2xl flex items-center justify-center mb-4 border border-[#00d4aa]/30 overflow-hidden">
+                        <img src="vibe coding流程/技术架构图.png" class="w-full h-full object-cover" alt="环境自动化">
                     </div>
                     <h4 class="font-bold mb-2">环境自动化</h4>
                     <p class="text-xs text-gray-500">通过Shell脚本或AI自动配置数据库与依赖</p>
                 </div>
                 <div class="text-center reveal">
-                    <div class="w-16 h-16 mx-auto bg-[#8b5cf6]/10 rounded-2xl flex items-center justify-center mb-4 border border-[#8b5cf6]/30">
-                        <i data-lucide="rocket" class="text-[#8b5cf6]"></i>
+                    <div class="w-16 h-16 mx-auto bg-[#8b5cf6]/10 rounded-2xl flex items-center justify-center mb-4 border border-[#8b5cf6]/30 overflow-hidden">
+                        <img src="vibe coding流程/线上产品截图.png" class="w-full h-full object-cover" alt="一键部署">
                     </div>
                     <h4 class="font-bold mb-2">一键部署</h4>
                     <p class="text-xs text-gray-500">集成Vercel/Cloudflare，实现分钟级上线</p>
@@ -335,7 +335,12 @@
                     '地理位置服务：集成OpenStreetMap，支持按距离搜索与筛选',
                     '响应式界面：Framer Motion动画，移动端与桌面端完美适配'
                 ],
-                images: ['首页轮播图', '商户详情页', '搜索筛选页', '商户后台管理']
+                images: [
+                    '大众点评/首页轮播图.png',
+                    '大众点评/商户详情页.png',
+                    '大众点评/搜索筛选页.png',
+                    '大众点评/商户后台管理.png'
+                ]
             },
             gongkao: {
                 title: '2027公考战略中心',
@@ -350,7 +355,12 @@
                     '错题本系统：录入/筛选/复习模式，仪表盘联动统计',
                     '打卡热力图：GitHub风格贡献图，量化备考坚持度'
                 ],
-                images: ['仪表盘倒计时', '战略地图时间轴', '错题本界面', '岗位推荐卡片']
+                images: [
+                    '考公战略/仪表盘倒计时.png',
+                    '考公战略/战略地图时间轴.png',
+                    '考公战略/错题本界面.png',
+                    '考公战略/岗位推荐卡片.png'
+                ]
             },
             mindscape: {
                 title: '心屿手札 MindScape',
@@ -365,7 +375,12 @@
                     'MBTI人格图谱：雷达图展示情绪偏好，周度复盘报告',
                     '能量兑换系统：情绪能量转化为生活动力的游戏化机制'
                 ],
-                images: ['情绪记录页', '心屿生态主题', '人格图谱雷达图', '能量兑换界面']
+                images: [
+                    '心屿手札/情绪记录页.png',
+                    '心屿手札/心屿生态主题.png',
+                    '心屿手札/人格图谱.png',
+                    '心屿手札/能量兑换界面.png'
+                ]
             },
             agent: {
                 title: 'Dify智能体客服系统',
@@ -380,7 +395,12 @@
                     '多轮对话管理：上下文记忆+变量提取+情感分析',
                     '业务闭环：API对接CRM/ERP，实现查询订单、退款进度'
                 ],
-                images: ['工作流架构图', '意图分类器', '知识库配置', '对话测试效果']
+                images: [
+                    '智能客服/工作流架构图.png',
+                    '智能客服/意图分类器.png',
+                    '智能客服/知识库配置.png',
+                    '智能客服/对话测试.png'
+                ]
             }
         };
 
@@ -403,32 +423,32 @@
                     </div>
                     <p class="text-xl text-gray-400 mb-4">${project.subtitle}</p>
                     <div class="flex gap-2 mb-6">
-                        ${project.tags.map(tag => `<span class="tag px-3 py-1 rounded-full text-xs">${tag}</span>`).join('')}
+                        ${project.tags.map(tag => \`<span class="tag px-3 py-1 rounded-full text-xs">\${tag}</span>\`).join('')}
                     </div>
                     <div class="flex gap-4">
-                        ${project.link !== '#' ? `<a href="${project.link}" target="_blank" class="inline-flex items-center gap-2 px-6 py-3 bg-[#00d4aa] text-black rounded-full font-semibold hover:opacity-90 transition-opacity"><i data-lucide="external-link" class="w-4 h-4"></i> 查看线上Demo</a>` : ''}
-                        ${project.github !== '#' ? `<a href="${project.github}" target="_blank" class="inline-flex items-center gap-2 px-6 py-3 border border-white/20 rounded-full font-semibold hover:bg-white/5 transition-colors"><i data-lucide="github" class="w-4 h-4"></i> GitHub仓库</a>` : ''}
+                        \${project.link !== '#' ? \`<a href="\${project.link}" target="_blank" class="inline-flex items-center gap-2 px-6 py-3 bg-[#00d4aa] text-black rounded-full font-semibold hover:opacity-90 transition-opacity"><i data-lucide="external-link" class="w-4 h-4"></i> 查看线上Demo</a>\` : ''}
+                        \${project.github !== '#' ? \`<a href="\${project.github}" target="_blank" class="inline-flex items-center gap-2 px-6 py-3 border border-white/20 rounded-full font-semibold hover:bg-white/5 transition-colors"><i data-lucide="github" class="w-4 h-4"></i> GitHub仓库</a>\` : ''}
                     </div>
                 </div>
                 <div class="grid grid-cols-2 gap-4 mb-8">
-                    ${project.images.map((img, idx) => `
-                        <div class="aspect-video rounded-xl img-placeholder">
-                            [${img}]
+                    \${project.images.map((img, idx) => \`
+                        <div class="aspect-video rounded-xl overflow-hidden bg-white/5">
+                            <img src="\${img}" class="w-full h-full object-cover" alt="\${project.title}">
                         </div>
-                    `).join('')}
+                    \`).join('')}
                 </div>
                 <div class="bg-white/5 border border-white/10 rounded-xl p-6">
                     <h3 class="text-xl font-bold mb-4">核心功能</h3>
                     <ul class="space-y-3">
-                        ${project.features.map(f => `
+                        \${project.features.map(f => \`
                             <li class="flex items-start gap-3">
                                 <i data-lucide="check-circle" class="w-5 h-5 text-[#00d4aa] mt-0.5"></i>
-                                <span class="text-gray-300">${f}</span>
+                                <span class="text-gray-300">\${f}</span>
                             </li>
-                        `).join('')}
+                        \`).join('')}
                     </ul>
                 </div>
-            `;
+            \`;
 
             document.getElementById('projects').classList.add('hidden');
             document.getElementById('project-detail').classList.remove('hidden');
