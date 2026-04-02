@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>作品集 | VibeCoding构建者 × AI智能体架构师</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        * { font-family: 'Inter', 'Noto Sans SC', sans-serif; }
+        body { background-color: #0a0a0a; color: #ffffff; overflow-x: hidden; }
+        .gradient-text {
+            background: linear-gradient(135deg, #00d4aa 0%, #8b5cf6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .neon-glow { box-shadow: 0 0 20px rgba(0, 212, 170, 0.3), 0 0 40px rgba(139, 92, 246, 0.2); }
+        .hover-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .hover-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 212, 170, 0.15);
+        }
+        .img-placeholder {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+            border: 2px dashed #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            font-size: 14px;
+        }
+        .tag {
+            background: rgba(0, 212, 170, 0.1);
+            border: 1px solid rgba(0, 212, 170, 0.3);
+            color: #00d4aa;
+        }
+        .tag-purple {
+            background: rgba(139, 92, 246, 0.1);
+            border: 1px solid rgba(139, 92, 246, 0.3);
+            color: #8b5cf6;
+        }
+        .tag-trae {
+            background: rgba(59, 130, 246, 0.1);
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            color: #60a5fa;
+        }
+        .tag-manus {
+            background: rgba(249, 115, 22, 0.1);
+            border: 1px solid rgba(249, 115, 22, 0.3);
+            color: #fb923c;
+        }
+        .timeline-line {
+            background: linear-gradient(to bottom, #00d4aa, #8b5cf6);
+        }
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .nav-blur {
+            backdrop-filter: blur(20px);
+            background: rgba(10, 10, 10, 0.8);
+        }
+        .grid-bg {
+            background-image: 
+                linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 50px 50px;
+        }
+    </style>
+<base target="_blank">
+</head>
+<body class="grid-bg">
+    <!-- 导航栏 -->
+    <nav class="fixed top-0 w-full z-50 nav-blur border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-xl font-bold gradient-text">Portfolio</div>
+            <div class="flex gap-6 text-sm">
+                <a href="#home" class="hover:text-[#00d4aa] transition-colors">首页</a>
+                <a href="#projects" class="hover:text-[#00d4aa] transition-colors">项目</a>
+                <a href="#vibecoding" class="hover:text-[#00d4aa] transition-colors">VibeCoding流程</a>
+                <a href="#agent" class="hover:text-[#00d4aa] transition-colors">智能体架构</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- (1) 首页 -->
+    <section id="home" class="min-h-screen flex items-center justify-center relative pt-20">
+        <div class="absolute inset-0 overflow-hidden">
+            <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-[#00d4aa]/20 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-[#8b5cf6]/20 rounded-full blur-3xl"></div>
+        </div>
+
+        <div class="max-w-5xl mx-auto px-6 text-center relative z-10">
+            <div class="w-32 h-32 mx-auto mb-8 rounded-full img-placeholder neon-glow">
+                [个人头像]
+            </div>
+
+            <h1 class="text-5xl md:text-7xl font-bold mb-6">
+                <span class="gradient-text">VibeCoding构建者</span>
+                <span class="text-white/60"> × </span>
+                <span class="gradient-text">AI智能体架构师</span>
+            </h1>
+
+            <p class="text-xl text-gray-400 mb-8 max-w-2xl mx-auto">
+                用自然语言构建产品，让AI成为我的工程团队
+            </p>
+
+            <div class="flex justify-center gap-12 mb-12">
+                <div class="text-center">
+                    <div class="text-3xl font-bold text-[#00d4aa]">3</div>
+                    <div class="text-sm text-gray-500">完整产品交付</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl font-bold text-[#8b5cf6]">1</div>
+                    <div class="text-sm text-gray-500">智能体系统</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl font-bold text-white">0→1</div>
+                    <div class="text-sm text-gray-500">独立全流程</div>
+                </div>
+            </div>
+
+            <a href="#projects" class="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-[#00d4aa] to-[#8b5cf6] rounded-full font-semibold hover:opacity-90 transition-opacity">
+                查看项目 <i data-lucide="arrow-down" class="w-4 h-4"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- (2) 大目录 -->
+    <section id="projects" class="py-20">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-12 text-center">项目目录</h2>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <!-- 大众点评 - Trae -->
+                <div class="hover-card bg-white/5 border border-white/10 rounded-2xl p-6 cursor-pointer" onclick="showProject('dianping')">
+                    <div class="h-48 rounded-xl img-placeholder mb-4">
+                        [大众点评封面图]
+                    </div>
+                    <div class="flex gap-2 mb-3 flex-wrap">
+                        <span class="tag px-3 py-1 rounded-full text-xs">VibeCoding</span>
+                        <span class="tag-trae px-3 py-1 rounded-full text-xs">Trae</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">大众点评Demo</h3>
+                    <p class="text-gray-400 text-sm mb-4">全栈商户评价平台，支持搜索、评分、地图定位与商户入驻系统</p>
+                    <div class="flex gap-2 text-xs text-gray-500">
+                        <span>React</span><span>•</span><span>Express</span><span>•</span><span>SQLite</span>
+                    </div>
+                </div>
+
+                <!-- 公考战略 - Manus -->
+                <div class="hover-card bg-white/5 border border-white/10 rounded-2xl p-6 cursor-pointer" onclick="showProject('gongkao')">
+                    <div class="h-48 rounded-xl img-placeholder mb-4">
+                        [公考战略封面图]
+                    </div>
+                    <div class="flex gap-2 mb-3 flex-wrap">
+                        <span class="tag px-3 py-1 rounded-full text-xs">VibeCoding</span>
+                        <span class="tag-manus px-3 py-1 rounded-full text-xs">Manus</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">2027公考战略中心</h3>
+                    <p class="text-gray-400 text-sm mb-4">备考进度可视化仪表盘，战略地图+错题本+分级岗位推荐</p>
+                    <div class="flex gap-2 text-xs text-gray-500">
+                        <span>Next.js</span><span>•</span><span>tRPC</span><span>•</span><span>Vitest</span>
+                    </div>
+                </div>
+
+                <!-- 心屿手札 - Manus -->
+                <div class="hover-card bg-white/5 border border-white/10 rounded-2xl p-6 cursor-pointer" onclick="showProject('mindscape')">
+                    <div class="h-48 rounded-xl img-placeholder mb-4">
+                        [心屿手札封面图]
+                    </div>
+                    <div class="flex gap-2 mb-3 flex-wrap">
+                        <span class="tag px-3 py-1 rounded-full text-xs">VibeCoding</span>
+                        <span class="tag-manus px-3 py-1 rounded-full text-xs">Manus</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">心屿手札 MindScape</h3>
+                    <p class="text-gray-400 text-sm mb-4">沉浸式情绪管理应用，将情绪转化为视觉生态与MBTI人格图谱</p>
+                    <div class="flex gap-2 text-xs text-gray-500">
+                        <span>React</span><span>•</span><span>PWA</span><span>•</span><span>Framer Motion</span>
+                    </div>
+                </div>
+
+                <!-- 智能体 - Dify -->
+                <div class="hover-card bg-white/5 border border-white/10 rounded-2xl p-6 cursor-pointer" onclick="showProject('agent')">
+                    <div class="h-48 rounded-xl img-placeholder mb-4">
+                        [智能体封面图]
+                    </div>
+                    <div class="flex gap-2 mb-3 flex-wrap">
+                        <span class="tag-purple px-3 py-1 rounded-full text-xs">AI Agent</span>
+                        <span class="bg-purple-500/10 border border-purple-500/30 text-purple-400 px-3 py-1 rounded-full text-xs">Dify</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Dify智能体客服系统</h3>
+                    <p class="text-gray-400 text-sm mb-4">基于RAG的企业级客服Agent，支持知识库问答、订单查询与情感安抚</p>
+                    <div class="flex gap-2 text-xs text-gray-500">
+                        <span>RAG</span><span>•</span><span>Workflow</span><span>•</span><span>Prompt Engineering</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- (3) 项目详情页（动态显示） -->
+    <section id="project-detail" class="py-20 hidden">
+        <div class="max-w-6xl mx-auto px-6">
+            <button onclick="backToList()" class="mb-8 flex items-center gap-2 text-gray-400 hover:text-white transition-colors">
+                <i data-lucide="arrow-left" class="w-4 h-4"></i> 返回目录
+            </button>
+            <div id="project-content"></div>
+        </div>
+    </section>
+
+    <!-- (4) VibeCoding全流程 -->
+    <section id="vibecoding" class="py-20 bg-white/5">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-4 text-center">VibeCoding全流程</h2>
+            <p class="text-center text-gray-400 mb-16">从自然语言Prompt到可部署产品的完整链路</p>
+
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="text-center reveal">
+                    <div class="w-16 h-16 mx-auto bg-[#00d4aa]/10 rounded-2xl flex items-center justify-center mb-4 border border-[#00d4aa]/30">
+                        <i data-lucide="message-square" class="text-[#00d4aa]"></i>
+                    </div>
+                    <h4 class="font-bold mb-2">需求Prompt化</h4>
+                    <p class="text-xs text-gray-500">精准描述功能点与UI风格，设定技术栈约束</p>
+                </div>
+                <div class="text-center reveal">
+                    <div class="w-16 h-16 mx-auto bg-[#8b5cf6]/10 rounded-2xl flex items-center justify-center mb-4 border border-[#8b5cf6]/30">
+                        <i data-lucide="code-2" class="text-[#8b5cf6]"></i>
+                    </div>
+                    <h4 class="font-bold mb-2">AI 结对编程</h4>
+                    <p class="text-xs text-gray-500">利用Trae/Manus生成代码，快速迭代核心逻辑</p>
+                </div>
+                <div class="text-center reveal">
+                    <div class="w-16 h-16 mx-auto bg-[#00d4aa]/10 rounded-2xl flex items-center justify-center mb-4 border border-[#00d4aa]/30">
+                        <i data-lucide="terminal" class="text-[#00d4aa]"></i>
+                    </div>
+                    <h4 class="font-bold mb-2">环境自动化</h4>
+                    <p class="text-xs text-gray-500">通过Shell脚本或AI自动配置数据库与依赖</p>
+                </div>
+                <div class="text-center reveal">
+                    <div class="w-16 h-16 mx-auto bg-[#8b5cf6]/10 rounded-2xl flex items-center justify-center mb-4 border border-[#8b5cf6]/30">
+                        <i data-lucide="rocket" class="text-[#8b5cf6]"></i>
+                    </div>
+                    <h4 class="font-bold mb-2">一键部署</h4>
+                    <p class="text-xs text-gray-500">集成Vercel/Cloudflare，实现分钟级上线</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- (5) 智能体架构 -->
+    <section id="agent" class="py-20">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-4 text-center">AI Agent 架构思考</h2>
+            <p class="text-center text-gray-400 mb-16">不仅是对话，更是解决问题的逻辑闭环</p>
+
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <div class="bg-white/5 p-6 rounded-xl border border-white/10">
+                        <h4 class="font-bold mb-3 flex items-center gap-2">
+                            <i data-lucide="layers" class="text-[#00d4aa] w-5 h-5"></i>
+                            RAG 优化链路
+                        </h4>
+                        <p class="text-sm text-gray-400">
+                            通过 Markdown 格式化知识库，结合语义检索与关键词检索，确保 Agent 回答的准确性与专业度。
+                        </p>
+                    </div>
+                    <div class="bg-white/5 p-6 rounded-xl border border-white/10">
+                        <h4 class="font-bold mb-3 flex items-center gap-2">
+                            <i data-lucide="git-branch" class="text-[#8b5cf6] w-5 h-5"></i>
+                            Workflow 工作流
+                        </h4>
+                        <p class="text-sm text-gray-400">
+                            将复杂任务拆解为原子节点，通过条件分支与变量传递，实现高度可控的 AI 执行逻辑。
+                        </p>
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="p-4 bg-red-500/5 border border-red-500/20 rounded-lg">
+                        <div class="flex items-center gap-2 mb-2 text-red-400">
+                            <i data-lucide="alert-circle" class="w-4 h-4"></i>
+                            <span class="font-semibold text-sm">幻觉问题</span>
+                        </div>
+                        <p class="text-xs text-gray-500 mb-2">Agent 生成了不存在的订单号</p>
+                        <p class="text-xs text-[#00d4aa]">→ 增加 API 校验节点强制验证</p>
+                    </div>
+                    <div class="p-4 bg-blue-500/5 border border-blue-500/20 rounded-lg">
+                        <div class="flex items-center gap-2 mb-2 text-blue-400">
+                            <i data-lucide="clock" class="w-4 h-4"></i>
+                            <span class="font-semibold text-sm">响应超时</span>
+                        </div>
+                        <p class="text-xs text-gray-500 mb-2">串行处理耗时过长，下游API响应慢</p>
+                        <p class="text-xs text-[#00d4aa]">→ 开启流式输出+Redis缓存高频问答</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-12 border-t border-white/10">
+        <div class="max-w-6xl mx-auto px-6 text-center text-gray-500 text-sm">
+            <p>© 2026 | 用AI构建产品，让想象落地</p>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+
+        const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('active'); });
+        }, observerOptions);
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        const projectData = {
+            dianping: {
+                title: '大众点评Demo',
+                subtitle: '全栈商户评价平台',
+                tags: ['React', 'Express', 'SQLite', 'Framer Motion'],
+                tool: 'Trae',
+                link: 'https://trae04-project-solojo9x.vercel.app',
+                github: 'https://github.com/jialiang1949sun/dianping-demo',
+                features: [
+                    '商户入驻系统：支持商户管理员注册、店铺信息编辑、图片上传',
+                    '用户评分评论：1-5星评分制度，200字评论限制，商家回复功能',
+                    '地理位置服务：集成OpenStreetMap，支持按距离搜索与筛选',
+                    '响应式界面：Framer Motion动画，移动端与桌面端完美适配'
+                ],
+                images: ['首页轮播图', '商户详情页', '搜索筛选页', '商户后台管理']
+            },
+            gongkao: {
+                title: '2027公考战略中心',
+                subtitle: '备考进度可视化仪表盘',
+                tags: ['Next.js', 'tRPC', 'Vitest', 'Tailwind CSS'],
+                tool: 'Manus',
+                link: 'https://gongkaodash-fraxe5tn.manus.space',
+                github: 'https://github.com/jialiang1949sun/CivilSail',
+                features: [
+                    '动态战略地图：基于启动日期自动推算5阶段备考时间轴',
+                    '分级岗位推荐：S/A/B三级匹配系统，适配控制工程专业',
+                    '错题本系统：录入/筛选/复习模式，仪表盘联动统计',
+                    '打卡热力图：GitHub风格贡献图，量化备考坚持度'
+                ],
+                images: ['仪表盘倒计时', '战略地图时间轴', '错题本界面', '岗位推荐卡片']
+            },
+            mindscape: {
+                title: '心屿手札 MindScape',
+                subtitle: '沉浸式情绪管理应用',
+                tags: ['React', 'PWA', 'Framer Motion', 'Three.js'],
+                tool: 'Manus',
+                link: 'https://mindscape-aumdvaxp.manus.space',
+                github: 'https://github.com/jialiang1949sun/mindscape',
+                features: [
+                    '双轨情绪记录：倾诉模式(暗黑系)与闪耀模式(明亮系)',
+                    '心屿生态可视化：三种主题切换，情绪转化为视觉元素',
+                    'MBTI人格图谱：雷达图展示情绪偏好，周度复盘报告',
+                    '能量兑换系统：情绪能量转化为生活动力的游戏化机制'
+                ],
+                images: ['情绪记录页', '心屿生态主题', '人格图谱雷达图', '能量兑换界面']
+            },
+            agent: {
+                title: 'Dify智能体客服系统',
+                subtitle: '企业级AI客服Agent',
+                tags: ['Dify', 'RAG', 'Workflow', 'Prompt Engineering'],
+                tool: 'Dify',
+                link: '#',
+                github: '#',
+                features: [
+                    '意图识别路由：闲聊/咨询/售后/操作四分类，精准分发',
+                    'RAG知识库：Markdown优化+混合检索+重排序精排',
+                    '多轮对话管理：上下文记忆+变量提取+情感分析',
+                    '业务闭环：API对接CRM/ERP，实现查询订单、退款进度'
+                ],
+                images: ['工作流架构图', '意图分类器', '知识库配置', '对话测试效果']
+            }
+        };
+
+        function showProject(projectId) {
+            const project = projectData[projectId];
+            if (!project) return;
+
+            const toolBadge = project.tool === 'Trae' ? 
+                '<span class="tag-trae px-3 py-1 rounded-full text-xs">Trae</span>' :
+                project.tool === 'Manus' ? 
+                '<span class="tag-manus px-3 py-1 rounded-full text-xs">Manus</span>' :
+                '<span class="bg-purple-500/10 border border-purple-500/30 text-purple-400 px-3 py-1 rounded-full text-xs">Dify</span>';
+
+            const content = document.getElementById('project-content');
+            content.innerHTML = `
+                <div class="mb-8">
+                    <div class="flex items-center gap-3 mb-4">
+                        <h1 class="text-4xl font-bold">${project.title}</h1>
+                        ${toolBadge}
+                    </div>
+                    <p class="text-xl text-gray-400 mb-4">${project.subtitle}</p>
+                    <div class="flex gap-2 mb-6">
+                        ${project.tags.map(tag => `<span class="tag px-3 py-1 rounded-full text-xs">${tag}</span>`).join('')}
+                    </div>
+                    <div class="flex gap-4">
+                        ${project.link !== '#' ? `<a href="${project.link}" target="_blank" class="inline-flex items-center gap-2 px-6 py-3 bg-[#00d4aa] text-black rounded-full font-semibold hover:opacity-90 transition-opacity"><i data-lucide="external-link" class="w-4 h-4"></i> 查看线上Demo</a>` : ''}
+                        ${project.github !== '#' ? `<a href="${project.github}" target="_blank" class="inline-flex items-center gap-2 px-6 py-3 border border-white/20 rounded-full font-semibold hover:bg-white/5 transition-colors"><i data-lucide="github" class="w-4 h-4"></i> GitHub仓库</a>` : ''}
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 gap-4 mb-8">
+                    ${project.images.map((img, idx) => `
+                        <div class="aspect-video rounded-xl img-placeholder">
+                            [${img}]
+                        </div>
+                    `).join('')}
+                </div>
+                <div class="bg-white/5 border border-white/10 rounded-xl p-6">
+                    <h3 class="text-xl font-bold mb-4">核心功能</h3>
+                    <ul class="space-y-3">
+                        ${project.features.map(f => `
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-[#00d4aa] mt-0.5"></i>
+                                <span class="text-gray-300">${f}</span>
+                            </li>
+                        `).join('')}
+                    </ul>
+                </div>
+            `;
+
+            document.getElementById('projects').classList.add('hidden');
+            document.getElementById('project-detail').classList.remove('hidden');
+            lucide.createIcons();
+            window.scrollTo(0, 0);
+        }
+
+        function backToList() {
+            document.getElementById('project-detail').classList.add('hidden');
+            document.getElementById('projects').classList.remove('hidden');
+            window.scrollTo(0, document.getElementById('projects').offsetTop - 100);
+        }
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            });
+        });
+    </script>
+</body>
+</html>
